@@ -1,0 +1,27 @@
+[user]
+	name = 'bababue'
+	email = '<>'
+	username = bababue
+
+[init]
+	defaultBranch = master
+
+[core]
+    editor = nvim
+    pager = delta
+    excludesFile = ~/.global_gitignore
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+

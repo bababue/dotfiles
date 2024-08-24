@@ -1,0 +1,13 @@
+git
+zsh
+stow
+fzf
+neovim
+curl
+trash-cli
+neofetch
+git-delta
+tldr
+ncdu
+ripgrep
+nodejs
