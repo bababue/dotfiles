@@ -33,6 +33,7 @@ esac
 if [ -n "$WSLENV" ]; then #Windows-only commands
     alias ssh='ssh.exe'
     alias ssh-add='ssh-add.exe'
+    git config --global core.sshCommand ssh.exe
 fi
 
 #ZSH Plugins
