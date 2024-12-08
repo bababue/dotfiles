@@ -68,12 +68,12 @@ alias vconf="nvim ~/.config/nvim/lua/bababue"
 alias ts=trash
 alias whatsmyip="curl http://ipecho.net/plain; echo"
 alias zconf="nvim ~/.zshrc"
-alias dlv="yt-dlp -S "ext" -S "height:1080""
+alias dlv='yt-dlp -S "ext" -S "height:1080"'
 alias dla="yt-dlp --extract-audio --audio-format mp3"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ls='ls --color'
-alias vnew='python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requierements.txt && whereis python'
+alias vnew='python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && whereis python'
 alias vactivate='source .venv/bin/activate'
 alias pwf='readlink -f '
 
@@ -81,4 +81,10 @@ alias pwf='readlink -f '
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 
