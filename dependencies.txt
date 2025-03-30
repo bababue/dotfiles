@@ -10,4 +10,7 @@ git-delta
 tldr
 ncdu
 ripgrep
+
 nodejs
+npm
+unzip

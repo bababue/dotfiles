@@ -30,6 +30,11 @@ case `uname` in
   ;;
 esac
 
+if [ -n "$WSLENV" ]; then #Windows-only commands
+    alias ssh='ssh.exe'
+    alias ssh-add='ssh-add.exe'
+    git config --global core.sshCommand ssh.exe
+fi
 
 #ZSH Plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -81,6 +86,7 @@ alias pwf='readlink -f '
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 
   export NVM_DIR="$HOME/.nvm"
