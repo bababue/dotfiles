@@ -92,6 +92,8 @@ alias pwf='readlink -f '
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+#Add to path
+export PATH="$HOME/go/bin:$PATH"
 
 
 
