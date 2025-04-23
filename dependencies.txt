@@ -11,6 +11,4 @@ tldr
 ncdu
 ripgrep
 go
-nodejs
-npm
 unzip
