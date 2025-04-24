@@ -1,0 +1,17 @@
+{
+  "HTML Base Structure": {
+    "prefix": "base",
+    "body": [
+      "<!doctype html>",
+      "<html>",
+      "<head>",
+      "<meta charset=\"utf-8\" />",
+      "<title>Change me</title>",
+      "</head>",
+      "<body>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Create the HTML base structure"
+  }
+}
