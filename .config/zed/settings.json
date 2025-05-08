@@ -11,12 +11,15 @@
     "metrics": false,
     "diagnostics": false
   },
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "openai",
       "model": "gpt-4o-mini"
     },
     "version": "2"
+  },
+  "auto_install_extensions": {
+    "dracula": true
   },
   "features": {
     "edit_prediction_provider": "zed",
