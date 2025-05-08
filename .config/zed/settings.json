@@ -32,9 +32,9 @@
   "buffer_font_size": 14,
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Dracula"
   },
   "cursor_blink": false,
   "relative_line_numbers": true,
