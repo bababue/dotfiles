@@ -30,6 +30,9 @@ case `uname` in
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
   ;;
   Linux) #Linux-only commands
+    # if uwsm check may-start; then # Autostart hyprland via uwsm
+    #     exec uwsm start hyprland.desktop
+    # fi
     #
   ;;
 esac
@@ -48,7 +51,7 @@ zinit light Aloxaf/fzf-tab
 
 autoload -Uz compinit && compinit #Atomatically load completions
 
-#ZSH History
+#ZSH history settings
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -67,22 +70,24 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# Shell integrations
+# FZF Shell integrations
 eval "$(fzf --zsh)"
 
 
 #Aliases
-alias v=nvim
 alias vconf="nvim ~/.config/nvim/lua/bababue"
+alias zconf="nvim ~/.zshrc"
+
+alias ls='ls --color'
+alias v=nvim
 alias ts=trash
 alias whatsmyip="curl http://ipecho.net/plain; echo"
-alias zconf="nvim ~/.zshrc"
 alias dlv='yt-dlp -S "ext" -S "height:1080"'
 alias dla="yt-dlp --extract-audio --audio-format mp3"
 alias ..="cd .."
 alias ...="cd ../.."
-alias ls='ls --color'
-alias vnew='python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && whereis python'
+alias vnew='python3 -m venv .venv && source .venv/bin/activate && whereis python'
+alias vinstall='pip install -r requirements.txt'
 alias vactivate='source .venv/bin/activate'
 alias pwf='readlink -f '
 
@@ -92,7 +97,7 @@ alias pwf='readlink -f '
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-#Add to path
+#Add GO to path
 export PATH="$HOME/go/bin:$PATH"
 
 
