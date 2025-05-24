@@ -77,7 +77,6 @@ eval "$(fzf --zsh)"
 #Aliases
 alias vconf="nvim ~/.config/nvim/lua/bababue"
 alias zconf="nvim ~/.zshrc"
-
 alias ls='ls --color'
 alias v=nvim
 alias ts=trash

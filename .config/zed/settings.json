@@ -18,9 +18,7 @@
     },
     "version": "2"
   },
-  "auto_install_extensions": {
-    "dracula": true
-  },
+  "auto_install_extensions": {},
   "features": {
     "edit_prediction_provider": "zed",
     "copilot": false
@@ -37,7 +35,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Dracula"
+    "dark": "One Dark"
   },
   "cursor_blink": false,
   "relative_line_numbers": true,
