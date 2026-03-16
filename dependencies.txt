@@ -1,9 +1,11 @@
-git
 zsh
+neovim
+git
+tmux
 stow
 fzf
-neovim
 curl
+wget
 trash-cli
 neofetch
 git-delta
@@ -11,3 +13,4 @@ tldr
 ncdu
 ripgrep
 unzip
+tree-sitter-cli

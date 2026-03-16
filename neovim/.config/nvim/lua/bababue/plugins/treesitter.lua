@@ -6,7 +6,7 @@ return {
     "windwp/nvim-ts-autotag",
   },
   config = function()
-    require("nvim-treesitter.configs").setup({ -- enable syntax highlighting
+    require("nvim-treesitter.config").setup({ -- enable syntax highlighting
       highlight = {
         enable = true,
       },
