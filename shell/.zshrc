@@ -30,6 +30,11 @@ case `uname` in
   Darwin) #Mac-only commands
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
+    #Add homebrew java to path if installed
+    if command -v java &> /dev/null; then
+      export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    fi
+
     export NVM_DIR="$HOME/.nvm"
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
