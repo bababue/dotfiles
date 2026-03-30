@@ -7,18 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "edit_predictions": {
-    "provider": "zed",
-  },
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false,
-  },
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
     },
+    "opencode": {
+      "favorite_models": [
+        "anthropic/claude-sonnet-4-6/medium",
+        "anthropic/claude-sonnet-4-6/high"
+      ],
+      "type": "registry"
+    },
+    "gemini": {
+      "type": "registry"
+    }
   },
   "auto_install_extensions": {},
   "toolbar": {
@@ -57,5 +59,19 @@
       "enabled": true,
     },
   },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
   "show_edit_predictions": false,
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "agent": {
+    "default_model": {
+      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+    },
+  },
 }
