@@ -1,0 +1,5 @@
+zed/.config/zed/keymap_backup.json
+zed/.config/zed/settings_backup.json
+zed/.config/zed/prompts/
+
+neovim/.config/nvim/lazy-lock.json
