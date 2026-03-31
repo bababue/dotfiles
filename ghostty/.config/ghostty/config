@@ -1,5 +1,5 @@
 font-family = "FiraCode Nerd Font Mono"
-theme = dracula
+theme = "Atom One Dark"
 
 shell-integration-features = no-cursor
 cursor-style = block

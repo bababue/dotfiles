@@ -7,22 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "JetBrains New UI Icons (Dark)",
   "agent_servers": {
     "claude-acp": {
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
       "favorite_models": [
         "anthropic/claude-sonnet-4-6/medium",
-        "anthropic/claude-sonnet-4-6/high"
+        "anthropic/claude-sonnet-4-6/high",
       ],
-      "type": "registry"
+      "type": "registry",
     },
     "gemini": {
-      "type": "registry"
-    }
+      "type": "registry",
+    },
   },
-  "auto_install_extensions": {},
+  "auto_install_extensions": {
+    "HTML": true,
+    "JetBrains Theme": true,
+    "JetBrains New UI Icon Theme": true,
+  },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": false,
@@ -34,8 +39,8 @@
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
     "mode": "dark",
-    "light": "One Light",
-    "dark": "One Dark",
+    "light": "JetBrains Light",
+    "dark": "JetBrains Dark",
   },
   "cursor_blink": false,
   "relative_line_numbers": "enabled",
