@@ -25,8 +25,8 @@
   },
   "auto_install_extensions": {
     "HTML": true,
-    "JetBrains Theme": true,
-    "JetBrains New UI Icon Theme": true,
+    "jetbrains-themes": true,
+    "jetbrains-new-ui-icons": true,
   },
   "toolbar": {
     "breadcrumbs": true,
