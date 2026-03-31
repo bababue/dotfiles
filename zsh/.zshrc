@@ -87,7 +87,7 @@ eval "$(fzf --zsh)"
 #Aliases
 alias vconf="nvim ~/.config/nvim/lua/bababue"
 alias zconf="nvim ~/.zshrc"
-alias ls='ls --color'
+alias ls='eza'
 alias v=nvim
 alias ts=trash
 alias whatsmyip="curl http://ipecho.net/plain; echo"
@@ -99,6 +99,11 @@ alias vnew='python3 -m venv .venv && source .venv/bin/activate && whereis python
 alias vinstall='pip install -r requirements.txt'
 alias vactivate='source .venv/bin/activate'
 alias pwf='readlink -f '
+
+alias gs='git status'
+alias gc='git commit -m'
+alias ga='git add'
+alias gd='git diff'
 
 
 
