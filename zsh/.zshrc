@@ -85,25 +85,27 @@ eval "$(fzf --zsh)"
 
 
 #Aliases
-alias vconf="nvim ~/.config/nvim/lua/bababue"
-alias zconf="nvim ~/.zshrc"
-alias ls='eza'
-alias v=nvim
-alias ts=trash
-alias whatsmyip="curl http://ipecho.net/plain; echo"
-alias dlv='yt-dlp -S "ext" -S "height:1080"'
-alias dla="yt-dlp --extract-audio --audio-format mp3"
-alias ..="cd .."
-alias ...="cd ../.."
-alias vnew='python3 -m venv .venv && source .venv/bin/activate && whereis python'
-alias vinstall='pip install -r requirements.txt'
-alias vactivate='source .venv/bin/activate'
-alias pwf='readlink -f '
-
 alias gs='git status'
 alias gc='git commit -m'
 alias ga='git add'
 alias gd='git diff'
+alias v=nvim
+alias ts=trash
+alias ..="cd .."
+alias ...="cd ../.."
+
+alias ls='eza'
+
+alias vconf="nvim ~/.config/nvim/lua/bababue"
+alias zconf="nvim ~/.zshrc"
+alias whatsmyip="curl http://ipecho.net/plain; echo"
+alias dlv='yt-dlp -S "ext" -S "height:1080"'
+alias dla="yt-dlp --extract-audio --audio-format mp3"
+
+alias vnew='python3 -m venv .venv && source .venv/bin/activate && whereis python'
+alias vinstall='pip install -r requirements.txt'
+alias vactivate='source .venv/bin/activate'
+alias pwf='readlink -f '
 
 
 
