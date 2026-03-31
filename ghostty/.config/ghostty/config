@@ -8,3 +8,6 @@ cursor-style-blink = false
 confirm-close-surface = false
 
 macos-option-as-alt = true
+
+command = zsh
+shell-integration = zsh

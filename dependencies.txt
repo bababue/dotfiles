@@ -13,4 +13,3 @@ tldr
 ncdu
 ripgrep
 unzip
-tree-sitter-cli
