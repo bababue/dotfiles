@@ -7,7 +7,7 @@ cursor-style-blink = false
 
 confirm-close-surface = false
 
-macos-option-as-alt = true
+macos-option-as-alt = "left"
 
 command = zsh
 shell-integration = zsh
