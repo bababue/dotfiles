@@ -96,6 +96,7 @@ alias ...="cd ../.."
 
 alias ls='eza'
 alias lsa='eza -lah'
+alias grep="rg"
 
 alias vconf="nvim ~/.config/nvim/lua/bababue"
 alias zconf="nvim ~/.zshrc"
