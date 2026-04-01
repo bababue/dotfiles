@@ -26,13 +26,5 @@ vim.keymap.set("", "<leader>P", '"+P')
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
---Switch between windows
-vim.keymap.set("n", "<leader>h", "<C-w><C-h>")
-vim.keymap.set("n", "<leader>j", "<C-w><C-j>")
-vim.keymap.set("n", "<leader>k", "<C-w><C-k>")
-vim.keymap.set("n", "<leader>l", "<C-w><C-l>")
-
-vim.keymap.set("n", "<leader>w", "<C-w><C-w>")
-
 --Select everything
 vim.keymap.set("", "<leader>a", "ggvG$")

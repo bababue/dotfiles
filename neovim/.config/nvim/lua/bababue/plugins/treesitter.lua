@@ -5,6 +5,7 @@ return {
   dependencies = {
     "windwp/nvim-ts-autotag",
   },
+  branch = "main",
   config = function()
     require("nvim-treesitter.config").setup({ -- enable syntax highlighting
       highlight = {
@@ -34,7 +35,6 @@ return {
         "vimdoc",
         "sql",
         "python"
-
       }
     })
   end,
