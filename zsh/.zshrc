@@ -9,29 +9,27 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#Add in Powerlevel 10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-
-# Download Zinit, if it's not there yet
+# Bootstrap zinit
 if [ ! -d "$ZINIT_HOME" ]; then
    mkdir -p "$(dirname $ZINIT_HOME)"
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-
-#Download Tmux Plugin Manager, if it's not there yet
+# Bootstrap Tmux Plugin Manager
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
     git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
     "$HOME/.tmux/plugins/tpm/bin/install_plugins"
 fi
 
-
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-#Add in Powerlevel 10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 #Mac or Linux specific commands
 case `uname` in
@@ -48,14 +46,10 @@ case `uname` in
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
   ;;
   Linux) #Linux-only commands
-    # if uwsm check may-start; then # Autostart hyprland via uwsm
-    #     exec uwsm start hyprland.desktop
-    # fi
-    #
   ;;
 esac
 
-if [ -n "$WSLENV" ]; then #Windows-only commands
+if [ -n "$WSLENV" ]; then # WSL-only commands
     alias ssh='ssh.exe'
     alias ssh-add='ssh-add.exe'
     git config --global core.sshCommand ssh.exe
