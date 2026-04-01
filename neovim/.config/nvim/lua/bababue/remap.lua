@@ -2,10 +2,12 @@
 vim.g.mapleader = " "
 
 --Custom keybinds
-vim.keymap.set("", "ü", "{")
-vim.keymap.set("", "ä", "}")
-vim.keymap.set("", "Ö", "O<Esc>")
-vim.keymap.set("", "ö", "o<Esc>")
+vim.keymap.set("", "ü", "[")
+vim.keymap.set("", "ä", "]")
+
+vim.keymap.set("", "Ü", "{")
+vim.keymap.set("", "Ä", "}")
+
 vim.keymap.set("", "ß", "$")
 
 --Y behaves like C or D
