@@ -19,6 +19,14 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+
+#Download Tmux Plugin Manager, if it's not there yet
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+    "$HOME/.tmux/plugins/tpm/bin/install_plugins"
+fi
+
+
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -116,3 +124,5 @@ alias pwf='readlink -f '
 if command -v go &> /dev/null; then
   export PATH="$HOME/go/bin:$PATH"
 fi
+
+
