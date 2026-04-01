@@ -102,12 +102,13 @@ alias ts=trash
 alias ..="cd .."
 alias ...="cd ../.."
 alias c="clear"
+alias x="exit"
 
 alias ls='eza'
 alias lsa='eza -lah'
 alias grep="rg"
 
-alias vconf="nvim ~/.config/nvim/lua/bababue"
+alias vconf="cd ~/.config/nvim/lua/bababue && nvim ."
 alias zconf="nvim ~/.zshrc"
 alias whatsmyip="curl http://ipecho.net/plain; echo"
 alias dlv='yt-dlp -S "ext" -S "height:1080"'
