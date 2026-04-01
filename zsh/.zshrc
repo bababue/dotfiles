@@ -101,6 +101,7 @@ alias v=nvim
 alias ts=trash
 alias ..="cd .."
 alias ...="cd ../.."
+alias c="clear"
 
 alias ls='eza'
 alias lsa='eza -lah'
