@@ -101,7 +101,7 @@ alias c="clear"
 alias x="exit"
 
 alias ls='eza'
-alias lsa='eza -lah'
+alias la='eza -lah'
 alias grep="rg"
 
 alias vconf="cd ~/.config/nvim/lua/bababue && nvim ."
