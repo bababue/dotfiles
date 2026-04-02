@@ -1,0 +1,7 @@
+[
+  {
+    "label": "r/latex",
+    "command": "pdflatex \"$ZED_FILENAME\"; open \"$ZED_DIRNAME/$ZED_STEM.pdf\"",
+    "tags": ["latex"],
+  },
+]
