@@ -36,6 +36,16 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 #Mac or Linux specific commands
 case `uname` in
   Darwin) #Mac-only commands
+    #sudo with TouchID
+    if ! grep -q "pam_tid.so" "/etc/pam.d/sudo"; then
+        echo "Passwort um TouchID zu akivieren"
+        sudo sed -i '' '3i\
+    auth       sufficient     pam_tid.so
+    ' "/etc/pam.d/sudo"
+        echo "Touch ID wurde in /etc/pam.d/sudo eingefügt."
+    fi
+    
+    #Add homebrew to shell
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
     #Add homebrew java to path if installed
@@ -43,6 +53,7 @@ case `uname` in
       export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
     fi
 
+    #Node Version manager
     export NVM_DIR="$HOME/.nvm"
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -101,7 +112,7 @@ alias c="clear"
 alias x="exit"
 
 alias ls='eza'
-alias la='eza -lah'
+alias la='eza -lahg'
 alias grep="rg"
 
 alias vconf="cd ~/.config/nvim/lua/bababue && nvim ."
