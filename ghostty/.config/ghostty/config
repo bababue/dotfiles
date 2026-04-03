@@ -11,3 +11,5 @@ macos-option-as-alt = "left"
 
 command = zsh
 shell-integration = zsh
+
+mouse-hide-while-typing = true

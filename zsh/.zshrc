@@ -115,8 +115,12 @@ alias ls='eza'
 alias la='eza -lahg'
 alias grep="rg"
 
-alias vconf="cd ~/.config/nvim/lua/bababue && nvim ."
-alias zconf="nvim ~/.zshrc"
+alias c_nvim="(cd ~/.config/nvim/lua/bababue ; nvim .)"
+alias c_zsh="(cd ; nvim ~/.zshrc)"
+alias c_tmux="(cd ; nvim ~/.tmux.conf)"
+alias c_ghostty="(cd ~/.config/ghostty/ ; nvim config)"
+
+
 alias whatsmyip="curl http://ipecho.net/plain; echo"
 alias dlv='yt-dlp -S "ext" -S "height:1080"'
 alias dla="yt-dlp --extract-audio --audio-format mp3"
