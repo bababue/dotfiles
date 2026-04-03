@@ -139,3 +139,7 @@ if command -v go &> /dev/null; then
 fi
 
 
+# Launch tmux
+if command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" ]]; then #Make sure tmux isnt running yet
+  exec tmux new -A -s main
+fi
