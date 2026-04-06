@@ -114,6 +114,8 @@ alias x="exit"
 alias ls='eza'
 alias la='eza -lahg'
 alias grep="rg"
+alias cat="bat"
+alias man="man -P bat"
 
 alias c_nvim="(cd ~/.config/nvim/lua/bababue ; nvim .)"
 alias c_zsh="(cd ; nvim ~/.zshrc)"
