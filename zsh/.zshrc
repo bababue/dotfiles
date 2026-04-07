@@ -48,6 +48,7 @@ case `uname` in
     #Add homebrew to shell
     eval "$(/opt/homebrew/bin/brew shellenv)"
 
+
     #Add homebrew java to path if installed
     if command -v java &> /dev/null; then
       export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
@@ -57,6 +58,12 @@ case `uname` in
     export NVM_DIR="$HOME/.nvm"
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+    #Optional: Launch tmux
+    if command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" ]]; then #Make sure tmux isnt running yet
+       tmux new -A -s main
+    fi
+
   ;;
   Linux) #Linux-only commands
   ;;
@@ -141,7 +148,4 @@ if command -v go &> /dev/null; then
 fi
 
 
-# Launch tmux
-if command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" ]]; then #Make sure tmux isnt running yet
-  exec tmux new -A -s main
-fi
+
