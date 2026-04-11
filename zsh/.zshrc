@@ -60,8 +60,11 @@ case `uname` in
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
     #Optional: Launch tmux
-    if command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" ]]; then #Make sure tmux isnt running yet
-       tmux new -A -s main
+    if command -v tmux >/dev/null 2>&1 \
+      && [[ -z "$TMUX" ]] \
+      && { [[ "${TERM-}" == "xterm-ghostty" ]] || [[ "${TERM_PROGRAM-}" == "ghostty" ]]; }
+    then
+      tmux new -A -s main
     fi
 
   ;;
