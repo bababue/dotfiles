@@ -14,5 +14,3 @@ shell-integration = zsh
 mouse-hide-while-typing = true
 
 keybind = performable:super+t=unbind
-
-

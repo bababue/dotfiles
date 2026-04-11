@@ -59,12 +59,15 @@ case `uname` in
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-    #Optional: Launch tmux
-    if command -v tmux >/dev/null 2>&1 \
-      && [[ -z "$TMUX" ]] && [[ -o interactive ]] && [[ -n "$TTY" ]] \
-      && case "${TERM_PROGRAM-}" in ghostty|Apple_Terminal|iTerm.app|WezTerm|kitty|Alacritty) true;; *) false;; esac
-    then
-      tmux new -A -s main
+
+    #Launch tmux only in Ghostty
+    if [[ $- == *i* ]]; then
+      # check that the terminal is Ghostty
+      if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
+        if [ -z "$TMUX" ] && command -v tmux >/dev/null 2>&1; then
+          tmux attach -t main || tmux new -s main
+        fi
+      fi
     fi
 
   ;;
