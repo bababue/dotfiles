@@ -61,8 +61,8 @@ case `uname` in
 
     #Optional: Launch tmux
     if command -v tmux >/dev/null 2>&1 \
-      && [[ -z "$TMUX" ]] \
-      && { [[ "${TERM-}" == "xterm-ghostty" ]] || [[ "${TERM_PROGRAM-}" == "ghostty" ]]; }
+      && [[ -z "$TMUX" ]] && [[ -o interactive ]] && [[ -n "$TTY" ]] \
+      && case "${TERM_PROGRAM-}" in ghostty|Apple_Terminal|iTerm.app|WezTerm|kitty|Alacritty) true;; *) false;; esac
     then
       tmux new -A -s main
     fi
