@@ -113,10 +113,18 @@ eval "$(fzf --zsh)"
 
 
 #Aliases
-alias gs='git status'
-alias gc='git commit -m'
+alias gs='git status -s'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
 alias ga='git add'
 alias gd='git diff'
+alias gpr='git pull --rebase'
+
+alias lea="hledger add"
+alias leba="hledger balancesheet -B"
+alias lein="hledger incomestatement"
+alias lete="hledger-textual"
+
 alias v=nvim
 alias ts=trash
 alias ..="cd .."
@@ -134,6 +142,8 @@ alias c_nvim="(cd ~/.config/nvim/lua/bababue ; nvim .)"
 alias c_zsh="(cd ; nvim ~/.zshrc)"
 alias c_tmux="(cd ; nvim ~/.tmux.conf)"
 alias c_ghostty="(cd ~/.config/ghostty/ ; nvim config)"
+
+alias l_zsh="(source $HOME/.zshrc)"
 
 
 alias whatsmyip="curl http://ipecho.net/plain; echo"
@@ -153,4 +163,11 @@ if command -v go &> /dev/null; then
   export PATH="$HOME/go/bin:$PATH"
 fi
 
+#Set env variable for hledger journal location
+if command -v hledger &> /dev/null; then
+    export LEDGER_FILE="~/finances/journals/main.journal"
+fi
 
+
+
+unset HISTFILE

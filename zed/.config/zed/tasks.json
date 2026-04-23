@@ -4,4 +4,17 @@
     "command": "pdflatex \"$ZED_FILENAME\"; open \"$ZED_DIRNAME/$ZED_STEM.pdf\"",
     "tags": ["latex"],
   },
+  {
+    "label": "r/java",
+    "command": "java \"$ZED_FILE\"",
+    "env": {},
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "dock",
+    "hide": "never",
+    "shell": "system",
+    "show_summary": true,
+    "show_command": true,
+  },
 ]
