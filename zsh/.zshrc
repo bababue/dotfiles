@@ -167,7 +167,3 @@ fi
 if command -v hledger &> /dev/null; then
     export LEDGER_FILE="~/finances/journals/main.journal"
 fi
-
-
-
-unset HISTFILE
