@@ -17,7 +17,8 @@ return {
           }
         })
 
-        vim.keymap.set('n', '<leader>df', require('telescope.builtin').live_grep, {})
-        vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, {})
+        vim.keymap.set('n', '<leader>f', require('telescope.builtin').live_grep, {desc="Fuzzy Finder"})
+        vim.keymap.set('n', '<leader>df', require('telescope.builtin').find_files, {desc="Fuzzy Finder (git-only)"})
+        vim.keymap.set('n', '<leader>k', require('telescope.builtin').keymaps, {desc="Show available keybinds"})
     end
 }
