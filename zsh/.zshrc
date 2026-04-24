@@ -116,12 +116,8 @@ if command -v go &> /dev/null; then
   export PATH="$HOME/go/bin:$PATH"
 fi
 
-#Set env variable for hledger journal location
-if command -v hledger &> /dev/null; then
-    export LEDGER_FILE="~/finances/journals/main.journal"
-fi
 
-
+export LEDGER_FILE="~/finances/journals/main.journal"
 
 alias gs='git status -s'
 alias gcm='git commit -m'
