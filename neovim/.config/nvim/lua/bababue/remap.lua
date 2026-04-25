@@ -24,5 +24,4 @@ vim.keymap.set("", "<leader>y", '"+y', {desc="Yank into system clipboard"})
 vim.keymap.set("", "<leader>p", '"+p', {desc="Paste from system clipboard"})
 vim.keymap.set("", "<leader>P", '"+P', {desc="Paste from system clipboard"})
 
-
-vim.keymap.set("", "<leader>a", "ggvG$", {desc="Select everything"})
+vim.keymap.set("", "<leader>a", "gg0vG$", {desc="Select everything"})

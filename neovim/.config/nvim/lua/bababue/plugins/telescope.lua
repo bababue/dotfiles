@@ -1,6 +1,6 @@
 return {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.5",
+    version = '*',
     dependencies = {
         "nvim-lua/plenary.nvim"
     },
@@ -17,8 +17,8 @@ return {
           }
         })
 
-        vim.keymap.set('n', '<leader>f', require('telescope.builtin').live_grep, {desc="Fuzzy Finder"})
-        vim.keymap.set('n', '<leader>df', require('telescope.builtin').find_files, {desc="Fuzzy Finder (git-only)"})
+        vim.keymap.set('n', '<leader>df', require('telescope.builtin').live_grep, {desc="Fuzzy find grep"})
+        vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, {desc="Fuzzy find files"})
         vim.keymap.set('n', '<leader>k', require('telescope.builtin').keymaps, {desc="Show available keybinds"})
     end
 }
