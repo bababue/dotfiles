@@ -35,7 +35,8 @@ return {
         "vimdoc",
         "sql",
         "python"
-      }
+      },
+      auto_install = true
     })
   end,
 }
