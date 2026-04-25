@@ -29,3 +29,23 @@ vim.opt.incsearch = true
 
 --Plugins
 vim.g.mapleader = " "
+
+
+vim.diagnostic.config({
+  virtual_text = {
+    severity = { min = vim.diagnostic.severity.WARN },
+    spacing = 4,
+    prefix = '»',
+    source = "if_many",
+  },
+
+  signs = false,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+
+  float = {
+    focusable = true,
+    style = 'minimal'
+  },
+})
