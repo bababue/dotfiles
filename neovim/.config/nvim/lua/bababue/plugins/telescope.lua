@@ -28,7 +28,7 @@ return {
     vim.keymap.set('n', '<leader>fd', require('telescope.builtin').find_files, { desc = "Fuzzy find files" })
     vim.keymap.set('n', '<leader>fk', require('telescope.builtin').keymaps, { desc = "Fuzzy find available keybinds" })
 
-    vim.keymap.set('n', '<leader>fn', function()
+    vim.keymap.set('n', '<leader>fc', function()
       require('telescope.builtin').find_files {
         cwd = vim.fn.stdpath("config")
 
