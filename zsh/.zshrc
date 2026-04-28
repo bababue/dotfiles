@@ -120,6 +120,7 @@ fi
 export LEDGER_FILE="~/finances/journals/main.journal"
 
 alias gs='git status -s'
+alias gl='git log --oneline'
 alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias ga='git add'
@@ -129,6 +130,7 @@ alias gpr='git pull --rebase'
 alias hla="hledger add"
 alias hlb="hledger balancesheet --cost --tree"
 alias hli="hledger incomestatement --tree"
+alias hlw="hledger-web --serve"
 alias hlt="hledger-textual"
 alias hle="nvim $LEDGER_FILE"
 
