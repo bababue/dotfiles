@@ -121,11 +121,12 @@ export LEDGER_FILE="~/finances/journals/main.journal"
 
 alias gs='git status -s'
 alias gl='git log --oneline'
-alias gcm='git commit -m'
-alias gcam='git commit -a -m'
+alias gc='git commit -m'
+
+alias gca='git commit -a -m'
 alias ga='git add'
 alias gd='git diff'
-alias gpr='git pull --rebase'
+alias gp='git pull'
 
 alias hla="hledger add"
 alias hlb="hledger balancesheet --cost --tree"
