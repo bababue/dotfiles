@@ -6,7 +6,8 @@ return {
       "pyright",
       "html",
       "cssls",
-      "texlab"
+      "texlab",
+      "marksman"
     }
   },
   dependencies = {
