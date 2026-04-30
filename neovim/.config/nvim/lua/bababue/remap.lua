@@ -2,13 +2,13 @@
 vim.g.mapleader = " "
 
 --Custom keybinds
-vim.keymap.set("", "ü", "[")
-vim.keymap.set("", "ä", "]")
+vim.keymap.set("", "ü", "[", { remap = true })
+vim.keymap.set("", "ä", "]", { remap = true })
 
-vim.keymap.set("", "Ü", "{")
-vim.keymap.set("", "Ä", "}")
+vim.keymap.set("", "Ü", "{", { remap = true })
+vim.keymap.set("", "Ä", "}", { remap = true })
 
-vim.keymap.set("", "ß", "$")
+vim.keymap.set("", "ß", "$", { remap = true })
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Perform a centered jump up" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Perform a centered jump down" })
@@ -40,8 +40,6 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action,
 
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart rename" })
 
-vim.keymap.set("n", "<leader>T", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
-vim.keymap.set("n", "<leader>t", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
 vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end,
   { desc = "Go to previous diagnostic" })
@@ -49,3 +47,24 @@ vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = tr
   desc =
   "Go to next diagnostic"
 })
+
+
+--quickfix
+vim.keymap.set("n", "<Leader>q",
+  function()
+    local windows = vim.fn.getwininfo()
+    for _, win in pairs(windows) do
+      if win["quickfix"] == 1 then
+        vim.cmd.cclose()
+        return
+      end
+    end
+    vim.cmd.copen()
+  end
+  , { desc = "Open Quickfix" })
+
+vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next Quickfix" })
+vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "Prev Quickfix" })
+
+
+vim.keymap.set("n", "<leader>t", vim.diagnostic.setqflist, { desc = "Add diagnostics to quickfix list" })

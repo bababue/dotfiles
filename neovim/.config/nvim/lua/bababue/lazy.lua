@@ -12,11 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = {
-        {import = "bababue.plugins"},
-        --{import = "bababue.plugins.lsp"}
-    },
-    change_detection = { 
-        enabled = true,
-        notify = false }
+  spec = {
+    { import = "bababue.plugins" },
+  },
+  change_detection = {
+    enabled = true,
+    notify = false
+  }
 })
