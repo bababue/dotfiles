@@ -3,9 +3,6 @@ return {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     build = ":TSUpdate",
-    dependencies = {
-      "windwp/nvim-ts-autotag",
-    },
     config = function()
       require("nvim-treesitter").setup({
         install_dir = vim.fn.stdpath("data") .. "/site",

@@ -17,5 +17,5 @@ return {
         changedelete = { text = '~' },
       },
     },
-  }
+  },
 }
