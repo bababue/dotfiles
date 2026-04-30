@@ -7,7 +7,6 @@ return {
       require('onedark').setup {
         style = 'darker'
       }
-
       require('onedark').load()
     end
   },
@@ -15,8 +14,6 @@ return {
     "nickkadutskyi/jb.nvim",
     enabled = true,
     priority = 1000,
-    config = function()
-    end
   },
 
 }

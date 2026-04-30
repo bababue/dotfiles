@@ -4,7 +4,6 @@ return {
     config = function()
       require('mini.surround').setup()
       require('mini.comment').setup()
-      require('mini.comment').setup()
 
       local spec_treesitter = require('mini.ai').gen_spec.treesitter
       require('mini.ai').setup({

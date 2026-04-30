@@ -11,14 +11,6 @@ return {
         install_dir = vim.fn.stdpath("data") .. "/site",
       })
 
-      require("nvim-treesitter").install({
-        "json", "javascript", "yaml", "toml",
-        "xml", "html", "css", "markdown",
-        "markdown_inline", "bash", "lua",
-        "dockerfile", "gitignore", "vimdoc",
-        "sql", "python",
-      })
-
       vim.api.nvim_create_autocmd("FileType", {
         pattern = { "*" },
         callback = function()
