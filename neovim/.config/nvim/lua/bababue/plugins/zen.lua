@@ -5,7 +5,7 @@ return {
       vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Toggle zen mode" }),
       window = {
         options = {
-          number = true,
+          number = false,
           relativenumber = false,
         }
       },
