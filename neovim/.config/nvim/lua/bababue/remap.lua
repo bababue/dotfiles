@@ -10,6 +10,9 @@ vim.keymap.set("", "Ä", "}", { remap = true })
 
 vim.keymap.set("", "ß", "$", { remap = true })
 
+vim.keymap.set("", "ö", "'", { remap = true })
+vim.keymap.set("", "Ö", "\"", { remap = true })
+
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Perform a centered jump up" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Perform a centered jump down" })
 

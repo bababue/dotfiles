@@ -4,8 +4,6 @@ return {
     config = function()
       require('mini.surround').setup()
 
-      require('mini.comment').setup()
-
       require('mini.pairs').setup()
 
       require('mini.files').setup()
@@ -49,7 +47,6 @@ return {
       require("oil").setup {
         columns = { "icon" },
         view_options = {
-          show_hidden = true,
         },
       }
       vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory in file explorer" })
