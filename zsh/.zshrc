@@ -144,6 +144,7 @@ alias x="exit"
 
 alias ls='eza'
 alias la='eza -lahg'
+alias cd='z'
 alias grep="rg"
 alias cat="bat"
 alias man="man -P bat"
@@ -163,3 +164,5 @@ alias vnew='python3 -m venv .venv && source .venv/bin/activate && whereis python
 alias vinstall='pip install -r requirements.txt'
 alias vactivate='source .venv/bin/activate'
 alias pwf='readlink -f '
+
+eval "$(zoxide init zsh)"
