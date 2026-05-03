@@ -8,7 +8,8 @@ return {
         "html",
         "cssls",
         "texlab",
-        "marksman"
+        "marksman",
+        "ruff",
       }
     },
     dependencies = {
