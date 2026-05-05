@@ -31,20 +31,30 @@ vim.opt.incsearch = true
 vim.g.mapleader = " "
 
 vim.diagnostic.config({
-  virtual_text = {
-    severity = { min = vim.diagnostic.severity.WARN },
-    spacing = 4,
-    prefix = "»",
-    source = "if_many",
-  },
+	virtual_text = {
+		severity = { min = vim.diagnostic.severity.WARN },
+		spacing = 4,
+		prefix = "»",
+		source = "if_many",
+	},
 
-  signs = false,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+	signs = false,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 
-  float = {
-    focusable = true,
-    style = "minimal",
-  },
+	float = {
+		focusable = true,
+		style = "minimal",
+	},
+})
+
+local markPrint = vim.api.nvim_create_augroup("MarkPrint", { clear = true })
+
+vim.api.nvim_create_autocmd("MarkSet", {
+	group = markPrint,
+	callback = function(ev)
+		print('Mark "' .. ev.data.name .. '" has been set in line', ev.data.line)
+	end,
+	desc = "Print mark on set",
 })
