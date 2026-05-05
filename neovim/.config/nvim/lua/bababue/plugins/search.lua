@@ -24,7 +24,7 @@ return {
 
     require('telescope').load_extension('fzf')
 
-    vim.keymap.set('n', '<leader>ff', require('telescope.builtin').live_grep, { desc = "Fuzzy find file contents" })
+    vim.keymap.set('n', '<leader>ff', require('telescope.builtin').live_grep, { desc = "Grep current directory" })
     vim.keymap.set('n', '<leader>fd', require('telescope.builtin').find_files, { desc = "Fuzzy find files" })
     vim.keymap.set('n', '<leader>fk', require('telescope.builtin').keymaps, { desc = "Fuzzy find available keybinds" })
 
@@ -34,6 +34,14 @@ return {
 
       }
     end, { desc = "Fuzzy find inside neovim config" })
+
+    vim.keymap.set('n', '<leader>fC', function()
+      require('telescope.builtin').live_grep {
+        cwd = vim.fn.stdpath("config")
+
+      }
+    end, { desc = "Grep inside neovim config" })
+
     vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = "Fuzzy find help tags" })
   end,
 

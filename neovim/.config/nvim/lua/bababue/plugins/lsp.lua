@@ -9,22 +9,19 @@ return {
         "cssls",
         "texlab",
         "marksman",
-        "ruff",
-      }
+      },
     },
     dependencies = {
       {
         "mason-org/mason.nvim",
-        opts = {
-
-        }
+        opts = {},
       },
-      "neovim/nvim-lspconfig"
-    }
+      "neovim/nvim-lspconfig",
+    },
   },
   {
     "folke/lazydev.nvim",
     ft = "lua",
     opts = {},
-  }
+  },
 }
