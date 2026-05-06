@@ -16,11 +16,6 @@ return {
 		"stevearc/conform.nvim",
 		config = function()
 			require("conform").setup({
-				formatters = {
-					black = {
-						prepend_args = { "--fast" },
-					},
-				},
 				formatters_by_ft = {
 					python = { "ruff" },
 					javascript = { "prettier" },
