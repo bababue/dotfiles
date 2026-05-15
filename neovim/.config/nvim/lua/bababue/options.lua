@@ -26,6 +26,7 @@ vim.opt.undofile = true
 --Fixed search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.smartcase = true
 
 --Plugins
 vim.g.mapleader = " "

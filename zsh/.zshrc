@@ -144,15 +144,17 @@ alias x="exit"
 
 alias ls='eza'
 alias la='eza -lahg'
-alias cd='z'
 alias grep="rg"
 alias cat="bat"
 alias man="man -P bat"
+eval "$(zoxide init zsh)"
+alias cd='z'
 
 alias c_nvim="(cd ~/.config/nvim/lua/bababue ; nvim .)"
 alias c_zsh="(cd ; nvim ~/.zshrc)"
 alias c_tmux="(cd ; nvim ~/.tmux.conf)"
 alias c_ghostty="(cd ~/.config/ghostty/ ; nvim config)"
+alias claude='SHELL=/bin/bash claude'
 
 alias l_zsh="(source $HOME/.zshrc)"
 
@@ -165,4 +167,6 @@ alias vinstall='pip install -r requirements.txt'
 alias vactivate='source .venv/bin/activate'
 alias pwf='readlink -f '
 
-eval "$(zoxide init zsh)"
+
+export EDITOR=nvim
+export VISUAL=nvim
