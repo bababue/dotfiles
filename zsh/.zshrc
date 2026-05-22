@@ -72,6 +72,7 @@ case `uname` in
 
   ;;
   Linux) #Linux-only commands
+      alias kassenbon="(cd /home/bababue/kassenbon/ && source .venv/bin/activate && pip install -r requirements.txt && python main.py)"
   ;;
 esac
 
