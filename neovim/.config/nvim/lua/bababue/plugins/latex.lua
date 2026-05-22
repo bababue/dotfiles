@@ -12,10 +12,10 @@ return {
       desc = "Jump to current latex position in PDF"
     })
 
-    if vim.fn.has('macunix') then
+    if vim.fn.has('macunix') == 1 then
       vim.g.vimtex_view_method = "skim"
     else
-      vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_view_method = "zathura_simple"
     end
   end,
 
