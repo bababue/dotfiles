@@ -29,16 +29,19 @@ vim.keymap.set("v", "<leader>x", ":lua<CR>", { desc = "Execute selection with lu
 vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Execute current line with lua" })
 vim.keymap.set("n", "<leader>X", "<CMD>source %<CR>", { desc = "Execute current line with lua" })
 
+
+vim.keymap.set("n", "<leader>a", "gg0vG$")
+
 --Quickfix
 vim.keymap.set("n", "<Leader>q", function()
-	local windows = vim.fn.getwininfo()
-	for _, win in pairs(windows) do
-		if win["quickfix"] == 1 then
-			vim.cmd.cclose()
-			return
-		end
-	end
-	vim.cmd.copen()
+  local windows = vim.fn.getwininfo()
+  for _, win in pairs(windows) do
+    if win["quickfix"] == 1 then
+      vim.cmd.cclose()
+      return
+    end
+  end
+  vim.cmd.copen()
 end, { desc = "Open Quickfix" })
 
 vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next Quickfix" })
