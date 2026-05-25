@@ -31,6 +31,9 @@ vim.opt.smartcase = true
 --Plugins
 vim.g.mapleader = " "
 
+--Window borders
+vim.o.winborder = "rounded"
+
 vim.diagnostic.config({
 	virtual_text = {
 		severity = { min = vim.diagnostic.severity.WARN },
