@@ -48,3 +48,16 @@ vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next Quickfix" })
 vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "Prev Quickfix" })
 
 vim.keymap.set("n", "<leader>t", vim.diagnostic.setqflist, { desc = "Add diagnostics to quickfix list" })
+
+
+vim.keymap.set('n', '<leader>r', function()
+  vim.cmd('w')
+  local ft = vim.bo.filetype
+  if ft == 'python' then
+    vim.cmd('!python3 %')
+  elseif ft == 'go' then
+    vim.cmd('!go run')
+  else
+    print('No runner configured for ' .. ft)
+  end
+end, { desc = 'Run current file' })
