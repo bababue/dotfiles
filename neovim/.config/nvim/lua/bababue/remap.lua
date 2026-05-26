@@ -56,7 +56,7 @@ vim.keymap.set('n', '<leader>r', function()
   if ft == 'python' then
     vim.cmd('!python3 %')
   elseif ft == 'go' then
-    vim.cmd('!go run')
+    vim.cmd('!go run %')
   else
     print('No runner configured for ' .. ft)
   end
