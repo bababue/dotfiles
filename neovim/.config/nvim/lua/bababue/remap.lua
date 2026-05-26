@@ -51,7 +51,6 @@ vim.keymap.set("n", "<leader>t", vim.diagnostic.setqflist, { desc = "Add diagnos
 
 
 vim.keymap.set('n', '<leader>r', function()
-  vim.cmd('w')
   local ft = vim.bo.filetype
   if ft == 'python' then
     vim.cmd('!python3 %')
