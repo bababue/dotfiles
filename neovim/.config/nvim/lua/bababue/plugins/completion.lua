@@ -10,6 +10,16 @@ return {
 		signature = { enabled = true },
 
 		fuzzy = { implementation = "prefer_rust_with_warning" },
+
+		sources = {
+			default = { "lsp", "buffer", "snippets", "path" },
+			per_filetype = {
+				sql = { "dadbod" },
+			},
+			providers = {
+				dadbod = { module = "vim_dadbod_completion.blink" },
+			},
+		},
 	},
 	opts_extend = { "sources.default" },
 }
