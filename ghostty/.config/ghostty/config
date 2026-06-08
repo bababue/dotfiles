@@ -1,5 +1,6 @@
 font-family = "FiraCode Nerd Font Mono"
-theme = "Atom One Dark"
+theme = "Gruvbox Material Dark"
+#theme = "Atom One Dark"
 
 shell-integration-features = no-cursor
 cursor-style = block
@@ -12,8 +13,6 @@ macos-option-as-alt = "left"
 shell-integration = zsh
 
 mouse-hide-while-typing = true
-
-keybind = performable:super+t=unbind
 
 macos-titlebar-proxy-icon = hidden
 title = " "
