@@ -133,6 +133,7 @@ alias hli="hledger incomestatement --tree"
 alias hlw="hledger-web --serve"
 alias hlt="hledger-textual"
 alias hle="nvim $LEDGER_FILE"
+alias ta="tmux attach"
 
 alias v=nvim
 alias ts=trash
