@@ -29,19 +29,18 @@ vim.keymap.set("v", "<leader>x", ":lua<CR>", { desc = "Execute selection with lu
 vim.keymap.set("n", "<leader>x", ":.lua<CR>", { desc = "Execute current line with lua" })
 vim.keymap.set("n", "<leader>X", "<CMD>source %<CR>", { desc = "Execute current line with lua" })
 
-
 vim.keymap.set("n", "<leader>a", "gg0vG$")
 
 --Quickfix
 vim.keymap.set("n", "<Leader>q", function()
-  local windows = vim.fn.getwininfo()
-  for _, win in pairs(windows) do
-    if win["quickfix"] == 1 then
-      vim.cmd.cclose()
-      return
-    end
-  end
-  vim.cmd.copen()
+	local windows = vim.fn.getwininfo()
+	for _, win in pairs(windows) do
+		if win["quickfix"] == 1 then
+			vim.cmd.cclose()
+			return
+		end
+	end
+	vim.cmd.copen()
 end, { desc = "Open Quickfix" })
 
 vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next Quickfix" })
@@ -49,14 +48,16 @@ vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "Prev Quickfix" })
 
 vim.keymap.set("n", "<leader>t", vim.diagnostic.setqflist, { desc = "Add diagnostics to quickfix list" })
 
-
-vim.keymap.set('n', '<leader>r', function()
-  local ft = vim.bo.filetype
-  if ft == 'python' then
-    vim.cmd('!python3 %')
-  elseif ft == 'go' then
-    vim.cmd('!go run %')
-  else
-    print('No runner configured for ' .. ft)
-  end
-end, { desc = 'Run current file' })
+vim.keymap.set("n", "<leader>r", function()
+	vim.cmd("w")
+	local ft = vim.bo.filetype
+	if ft == "python" then
+		vim.cmd("!python3 %")
+	elseif ft == "go" then
+		vim.cmd("!go run %")
+	elseif ft == "sh" then
+		vim.cmd("!./%")
+	else
+		print("No runner configured for " .. ft)
+	end
+end, { desc = "Run current file" })

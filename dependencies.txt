@@ -16,3 +16,4 @@ eza
 unzip
 bat
 zoxide
+starship
